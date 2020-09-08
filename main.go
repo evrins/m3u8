@@ -3,9 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
+	"m3u8-downloader/dl"
 	"os"
-
-	"github.com/oopsguy/m3u8/dl"
 )
 
 var (

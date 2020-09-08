@@ -4,14 +4,14 @@ import (
 	"bufio"
 	"fmt"
 	"io/ioutil"
+	"m3u8-downloader/parse"
+	"m3u8-downloader/tool"
 	"os"
 	"path/filepath"
 	"strconv"
 	"sync"
 	"sync/atomic"
 
-	"github.com/oopsguy/m3u8/parse"
-	"github.com/oopsguy/m3u8/tool"
 )
 
 const (

@@ -4,9 +4,8 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
+	"m3u8-downloader/tool"
 	"net/url"
-
-	"github.com/oopsguy/m3u8/tool"
 )
 
 type Result struct {
@@ -61,7 +60,7 @@ func FromURL(link string) (*Result, error) {
 			if err != nil {
 				return nil, err
 			}
-			fmt.Println("decryption key: ", string(keyByte))
+			fmt.Printf("decryption key: %x\n", keyByte)
 			result.Keys[idx] = string(keyByte)
 		default:
 			return nil, fmt.Errorf("unknown or unsupported cryption method: %s", key.Method)
